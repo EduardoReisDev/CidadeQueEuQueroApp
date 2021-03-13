@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CidadeQueEuQuero.View.ViewMenu.PaginaMenu">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#52154E">
+            <StackLayout Margin="20,0,0,0">
+
+                <StackLayout Orientation="Horizontal" Margin="0,25,0,0">
+                    <Image Source="home.png" WidthRequest="20"/>
+                    <Label Text="Página inicial" FontSize="15" TextColor="White" VerticalOptions="Center" Margin="10,0,0,0"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoHome"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                    <Image Source="post.png" WidthRequest="20"/>
+                    <Label Text="Minhas postagens" FontSize="15" TextColor="White" VerticalOptions="Center" Margin="10,0,0,0"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoPosts"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                    <Image Source="sair.png" WidthRequest="20"/>
+                    <Label Text="Sair" FontSize="15" TextColor="White" VerticalOptions="Center" Margin="10,0,0,0"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoSair"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                    <Image Source="star.png" WidthRequest="20"/>
+                    <Label Text="Avalie o app" FontSize="15" TextColor="White" VerticalOptions="Center" Margin="10,0,0,0"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoAvalie"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                    <Image Source="perfil.png" WidthRequest="20"/>
+                    <Label Text="Fale com o desenvolvedor" FontSize="15" TextColor="White" VerticalOptions="Center" Margin="10,0,0,0"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoFeedback"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,40,0,0">
+                    <Label Text="V 1.0" FontSize="10" TextColor="White" VerticalOptions="Center"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

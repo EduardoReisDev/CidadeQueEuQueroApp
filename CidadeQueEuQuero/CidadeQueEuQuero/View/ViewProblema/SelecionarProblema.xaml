@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CidadeQueEuQuero.View.SelecionarProblema"
+             Title="Selecione um problema"
+             BackgroundColor="#52154E">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="10"
+                  Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Frame Grid.Column="0"
+                       Grid.Row="0"
+                       Padding="0"
+                       CornerRadius="10"
+                       HasShadow="True">
+                    <StackLayout BackgroundColor="#2b0b29">
+                        <Image Source="street.png"
+                               WidthRequest="60"
+                               Margin="10"/>
+                        <Label Text="Poste danificado"
+                               TextColor="White"
+                               HorizontalTextAlignment="Center"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="PosteLuz"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Grid.Column="1"
+                        Grid.Row="0"
+                        Padding="0"
+                        CornerRadius="10"
+                        HasShadow="True">
+                    <StackLayout BackgroundColor="#2b0b29">
+                        <Image Source="deficient.png"
+                               WidthRequest="60"
+                               Margin="10"/>
+                        <Label Text="Sem acesso para deficientes"
+                               TextColor="White"
+                               HorizontalTextAlignment="Center"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AcessoDeficiente"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Grid.Column="2"
+                        Grid.Row="0"
+                        Padding="0"
+                        CornerRadius="10"
+                        HasShadow="True">
+                    <StackLayout BackgroundColor="#2b0b29">
+                        <Image Source="road.png"
+                               WidthRequest="60"
+                               Margin="10"/>
+                        <Label Text="Calçada com problemas"
+                               TextColor="White"
+                               HorizontalTextAlignment="Center"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="CalcadaProblema2"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Grid.Column="0"
+                        Grid.Row="1"
+                        Padding="0"
+                        CornerRadius="10"
+                        HasShadow="True">
+                    <StackLayout BackgroundColor="#2b0b29">
+                        <Image Source="roadproblem.png"
+                                WidthRequest="60"
+                                Margin="10"/>
+                        <Label Text="Asfalto danificado"
+                                TextColor="White"
+                                HorizontalTextAlignment="Center"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="RuaSemPavimentacao"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Grid.Column="1"
+                        Grid.Row="1"
+                        Padding="0"
+                        CornerRadius="10"
+                        HasShadow="True">
+                    <StackLayout BackgroundColor="#2b0b29">
+                        <Image Source="trash.png"
+                                WidthRequest="60"
+                                Margin="10"/>
+                        <Label Text="Lixo sem coleta"
+                                TextColor="White"
+                                HorizontalTextAlignment="Center"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LixoSemColeta"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Grid.Column="2"
+                        Grid.Row="1"
+                        Padding="0"
+                        CornerRadius="10"
+                        HasShadow="True">
+                    <StackLayout BackgroundColor="#2b0b29">
+                        <Image Source="pipe.png"
+                                WidthRequest="60"
+                                Margin="10"/>
+                        <Label Text="Bueiro entupido"
+                                TextColor="White"
+                                HorizontalTextAlignment="Center"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BueiroEntupido"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Grid.Column="0"
+                        Grid.Row="2"
+                        Padding="0"
+                        CornerRadius="10"
+                        HasShadow="True">
+                    <StackLayout BackgroundColor="#2b0b29">
+                        <Image Source="waste.png"
+                                WidthRequest="60"
+                                Margin="10"/>
+                        <Label Text="Esgoto a céu aberto"
+                                TextColor="White"
+                                HorizontalTextAlignment="Center"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="EsgotoCeuAberto"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Grid.Column="1"
+                        Grid.Row="2"
+                        Padding="0"
+                        CornerRadius="10"
+                        HasShadow="True">
+                    <StackLayout BackgroundColor="#2b0b29">
+                        <Image Source="mosquito.png"
+                                WidthRequest="60"
+                                Margin="10"/>
+                        <Label Text="Foco de dengue"
+                                TextColor="White"
+                                HorizontalTextAlignment="Center"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="FocoDengue"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <Frame Grid.Column="2"
+                        Grid.Row="2"
+                        Padding="0"
+                        CornerRadius="10"
+                        HasShadow="True">
+                    <StackLayout BackgroundColor="#2b0b29">
+                        <Image Source="conemenu.png"
+                                WidthRequest="60"
+                                Margin="10"/>
+                        <Label Text="Outros"
+                                TextColor="White"
+                                HorizontalTextAlignment="Center"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Outros"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

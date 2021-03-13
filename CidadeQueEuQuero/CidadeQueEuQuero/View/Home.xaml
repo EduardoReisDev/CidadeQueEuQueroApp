@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:local="clr-namespace:CidadeQueEuQuero.Renderer"
+             mc:Ignorable="d"
+             x:Class="CidadeQueEuQuero.View.Home"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#52154E">
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#52154E"
+                     Margin="0,0,0,20">
+            <Frame CornerRadius="20"
+                   VerticalOptions="FillAndExpand"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                <local:CustomMap x:Name="map" 
+                          IsShowingUser="true"/>
+            </Frame>
+
+            <Label Text="Vamos ajudar a sua cidade?"
+                   Margin="20,10,0,0"
+                   TextColor="White"/>
+
+            <Grid HorizontalOptions="CenterAndExpand"
+                  Margin="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="200"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="openmenu.png"
+                             BackgroundColor="#2b0b29"
+                             Grid.Column="0"
+                             CornerRadius="10"
+                             Padding="12"
+                             Clicked="GoMenuMaster"
+                             HeightRequest="20"/>
+                <Button Text="Encontrei um problema"
+                        TextColor="White"
+                        BackgroundColor="#2b0b29"
+                        CornerRadius="10"
+                        ImageSource="cone.png"
+                        Clicked="GoCadastroProblema"
+                        Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

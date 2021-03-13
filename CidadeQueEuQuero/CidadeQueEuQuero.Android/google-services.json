@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "641977323707",
+    "firebase_url": "https://cidadequeeuquero-42b82.firebaseio.com",
+    "project_id": "cidadequeeuquero-42b82",
+    "storage_bucket": "cidadequeeuquero-42b82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641977323707:android:9aa27c66406c6d4f2c999e",
+        "android_client_info": {
+          "package_name": "com.companyname.cidadequeeuquero"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641977323707-n8outf2obgfbrd1bfbejvq8ssldahufv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzAL0Gjjy2M1nI2GY9fZU1gLwqeAoZmW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641977323707-n8outf2obgfbrd1bfbejvq8ssldahufv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

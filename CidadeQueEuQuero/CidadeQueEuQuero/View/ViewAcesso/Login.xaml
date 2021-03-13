@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:CidadeQueEuQuero.ViewModel"
+             xmlns:Renderer="clr-namespace:CidadeQueEuQuero.Renderer"
+             mc:Ignorable="d"
+             x:Class="CidadeQueEuQuero.View.Login"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:LoginViewModel x:Key="vm"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="20"
+                     VerticalOptions="Center">
+            <StackLayout HorizontalOptions="Center">
+                <Image Source="fonte.png"
+                       WidthRequest="100"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="Login"
+                       FontSize="20"/>
+            </StackLayout>
+            <StackLayout Orientation="Vertical"
+                         Padding="10"
+                         BindingContext="{StaticResource vm}">
+                <StackLayout x:Name="loginStackLayout" IsVisible="True">
+                    <Frame BackgroundColor="Transparent"
+                           BorderColor="#52154E"
+                           CornerRadius="10"
+                           Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="arroba.png"
+                                   WidthRequest="20"
+                                   Margin="10,0,0,0"
+                                   HorizontalOptions="Start"/>
+                            <Renderer:XEntry Placeholder="Email"
+                                         Text="{Binding Email, Mode=TwoWay}"
+                                         Keyboard="Email"
+                                             HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                            BorderColor="#52154E"
+                            CornerRadius="10"
+                            Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="password.png"
+                                   Margin="10,0,0,0"
+                                   WidthRequest="20"
+                                   HorizontalOptions="Start"/>
+                            <Renderer:XEntry Placeholder="Senha"
+                                             HorizontalOptions="FillAndExpand"
+                                             IsPassword="true"
+                                             Text="{Binding Password, Mode=TwoWay}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Button Text="Login"
+                            TextColor="White"
+                            BackgroundColor="#52154E"
+                            BorderColor="White"
+                            CornerRadius="10"
+                            Command="{Binding LoginCommand}"
+                            CommandParameter="{Binding CanLogin}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Não tem uma conta?"/>
+                        <Label Text="Registre-se" TextColor="#52154E" FontAttributes="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="CadastroLabel_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout x:Name="cadastroStackLayout" IsVisible="False">
+                    <Frame BackgroundColor="Transparent"
+                            BorderColor="#52154E"
+                            CornerRadius="10"
+                            Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="user.png"
+                                   Margin="10,0,0,0"
+                                   HorizontalOptions="Start"
+                                   WidthRequest="20"/>
+                            <Renderer:XEntry Placeholder="Nome"
+                                             HorizontalOptions="FillAndExpand"
+                                             Text="{Binding Nome, Mode=TwoWay}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                            BorderColor="#52154E"
+                            CornerRadius="10"
+                            Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="arroba.png"
+                                   Margin="10,0,0,0"
+                                   HorizontalOptions="Start"
+                                   WidthRequest="20"/>
+                            <Renderer:XEntry Placeholder="Email"
+                                             HorizontalOptions="FillAndExpand"
+                                             Text="{Binding Email, Mode=TwoWay}"
+                                             Keyboard="Email"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                            BorderColor="#52154E"
+                            CornerRadius="10"
+                            Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="password.png"
+                                   WidthRequest="20"
+                                   Margin="10,0,0,0"
+                                   HorizontalOptions="Start"/>
+                            <Renderer:XEntry Placeholder="Senha"
+                                             IsPassword="true"
+                                             HorizontalOptions="FillAndExpand"
+                                             Text="{Binding Password, Mode=TwoWay}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame BackgroundColor="Transparent"
+                            BorderColor="#52154E"
+                            CornerRadius="10"
+                            Padding="0">
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="password.png"
+                                   HorizontalOptions="Start"
+                                   Margin="10,0,0,0"
+                                   WidthRequest="20"/>
+                            <Renderer:XEntry Placeholder="Confirme sua senha"
+                                             IsPassword="true"
+                                             HorizontalOptions="FillAndExpand"
+                                             Text="{Binding ConfirmPassword, Mode=TwoWay}"/>
+                        </StackLayout>
+                    </Frame>
+                    <Button Text="Cadastre-se"
+                            BackgroundColor="#52154E"
+                            TextColor="White"
+                            CornerRadius="10"
+                            Command="{Binding RegisterCommand}"
+                            CommandParameter="{Binding CanRegister}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Você tem uma conta?"/>
+                        <Label Text="Login"
+                               TextColor="#52154E"
+                               FontAttributes="Bold">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="LoginLabel_Tapped"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
